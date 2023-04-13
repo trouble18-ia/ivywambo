@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+body {
+ padding:0;
+ margin:0;
+ background: linear-gradient(black, blue,black );
+ background-size: cover;
+background-position: center ; 
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ min-height:100%;
+ 
+}
+@viewport{
+    width:device-width;
+    height:device-height;
+    
+}
+.calender {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10%;
+  background: rgb(26,26,71);
+  background: linear-gradient(90deg, rgba(26,26,71,1) 0%, rgba(84,84,230,1) 70%, rgba(0,212,255,1) 97%);
+  font-size: 0;
+  width:80%;
+  height:65%;
+  margin-top:100px;
+}
+.day, .month {
+  font-family: 'Arimo', sans-serif;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #ccc;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 3rem; height: 3rem;
+}
+.month {
+  width: 100%;
+}
+.model {
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:auto;
+ background: rgb(255,0,0);
+background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,119,8,1) 38%, rgba(255,213,10,1) 100%);
+ padding:2rem;
+ overflow:hidden;
+ display:none;
+ color:#fff;
+}
+.close {
+ position:absolute;
+ top:0px;
+ left:75%;
+ font-size:40px;
+ cursor:pointer;
+}
+
+.content p{
+ color:#fff;
+ font-weight:bold;
+ border-bottom:1px solid #fff;
+ padding-bottom:0px;
+ margin:5px;
+ font-size:20px;
+}
+.content p:last-child {
+ border-bottom:none;
+}
+a,a:hover {
+text-decoration:none;
+}
+ul {
+ list-style:none;
+}
+
+.landing {
+ top:0;
+ left:0;
+ right:0;
+ bottom:0;
+ width:100%;
+ height:100%;
+ background:#000;
+ text-align:center;
+ padding-top:0px;
+}
+
+p {
+position: relative;
+ margin:30px auto;
+ color:white;
+ text-shadow: 2px 2pxpx 20px #3cc6d8;
+ width:400px;
+ line-height:1.5;
+ position:relative;
+ }
+
+.start-btn {
+ display:inline-block
+ outline:none;
+ border:none;
+ padding:10px 20px;
+ border-radius:25px;
+ color:#fff;
+ background:#000;
+ color: #1c5169;
+ box-shadow: 0px 0px 20px 8px #3cc6d8;
+ background-color: #d7f3ff;
+ animation:startBtn 3s linear infinite;
+ margin-bottom:15%;
+ bottom: 5%;
+ }
+@keyframes startBtn {
+ to {
+  filter:hue-rotate(360deg);
+ }
+
+}
+</style>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+</script>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+</head>
+<body link="yellow" alink="yellow" vlink="yellow">
+
+<script>
+swal({
+
+  title: ,
+  text: 
+  icon: ,
+  button: ,
+});
+</script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script> function show(shown, hidden) { document.getElementById(shown).style.display='block'; document.getElementById(hidden).style.display='none'; return false; } </script> </head> <body> <div id="Page1" style="background-color:Red;"> 
+<section class="landing">
+<img src="t.jpg" width="350" height="500" >
+
+ <p class="header" style="color:white; text-align: center;">Hello Babe!<br>What do you think of this?<br>Maybe Better found it Yourself...<br><br>T<br>A<br>P</p>
+
+
+
+
+ <a href="#" onclick="return show('Page2','Page1');">
+ <button class="start-btn" >Continue</button>
+ </div>
+</section>
+</a>
+    
+    
+    
+    
+    
+    
+</a>
+
+ </div>
+  <main id="Page2" style="display:none">
+<div class="model">
+ <span class="close" >&times;</span>
+ <div class="content">
+ </div>
+</div>
+<div class="calender">
+  <div class="month">Birthday Calender</div>
+  <div class="month">April 2023</div>
+  <div class="day">1</div>
+  <div class="day">2</div>
+  <div class="day">3</div>
+  <div class="day">4</div>
+  <div class="day">5</div>
+  <div class="day">6</div>
+  <div class="day">7</div>
+  <div class="day">8</div>
+  <div class="day">9</div>
+  <div class="day">10</div>
+  <div class="day">11</div>
+  <div class="day">12</div>
+  <div class="day">13</div>
+  <div class="day">14</div>
+  <div class="day">15</div>
+  <div class="day">16</div>
+  <div class="day">17</div>
+  <div class="day">18</div>
+  <div class="day">19</div>
+  <div class="day">20</div>
+  <div class="day">21</div>
+  <a href="countdown.html"><div class="day"><b>22</b></div></a>
+  <div class="day">23</div>
+  <div class="day">24</div>
+  <div class="day">25</div>
+  <div class="day">26</div>
+  <div class="day">27</div>
+  <div class="day">28</div>
+  <div class="day">29</div>
+  <div class="day">30</div>
+  <div class="day">31</div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="../jQuery/jquery.js"></script>
+<script>
+  let bday = [
+   {
+     date:4,
+     data:'<a href="">Peter</a> - 4th October'
+ },
+ {
+     date:11,
+     data:'<a href="">Shiro wa Leah </a> - 11th October'
+ },
+ {
+     date:3,
+     data:'<a href="">Leah </a> - 3rd April'
+ },
+   
+    ];
+    
+  $(document).ready(function(){
+   $(".day").click(function(){
+    const n = $(this).text();
+    const data = bday.filter(d => d.date == n);
+    let txt = '';
+    data.forEach(d => txt+=`<p>${d.data}</p>`);
+    $(".model").slideDown()
+    $(".content").html(txt || "<p>Oops , Insufficient Data ! Do you know anyone whose b'day is on this date ?</p>")
+   })
+   $(".close").click(function(){
+    $(".model").slideUp()
+   })
+  })
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Slide Show</title>
+<style type="text/css">
+
+body{
+
+font-family: verdana,sans-serif;
+padding: 0;
+margin: 0;
+background: radial-gradient(ellipse at center, rgba(76,76,76,1) 0%, rgb(23, 20, 125) 12%, rgba(102,102,102,1) 25%, rgb(11, 8, 110) 39%, rgba(44,44,44,1) 50%, rgb(20, 7, 141) 51%, rgba(17,17,17,1) 60%, rgb(6, 24, 118) 76%, rgba(28,28,28,1) 91%, rgb(12, 8, 143) 100%);
+background-size: cover;
+overflow:hidden;
+background-repeat: no-repeat;
+width: 100%;
+height: 100vh;
+
+}
+
+footer{
+    color:yellow;
+}
+
+img{
+ width:800px; 
+ height:80vh;
+ 
+}
+
+h1{
+  text-align:center;
+  font-size: 62px;
+  color: yellow;
+  text-shadow:5px 5px 5px rgba(225,131,156,0.7);
+    
+}
+
+.slideshow-container{
+
+width: 800px;
+height: 80vh;
+
+position: relative;
+
+margin: auto;
+ border:10px inset gray;
+
+}
+
+.numbers{
+
+position: absolute;
+
+top: 0;
+
+color: #f2f2f2;
+
+padding: 8px 12px;
+
+font-size: 52px;
+background-color:rgba(31, 3, 3, 0.9);
+border-radius:50%;
+
+}
+
+.myslides{
+
+display: none;
+width: 400px;
+height: 400px;
+
+}
+button{
+    background:black;
+}
+.prev , .next{
+
+position: absolute;
+
+top: 50%;
+
+font-size: 88px;
+
+font-weight: bold;
+
+padding: 16px;
+
+margin-top: -22px;
+
+border-radius: 0 3px 3px 0;
+
+color: #fff;
+
+cursor: pointer;
+
+}
+
+.next{
+
+right: 0;
+
+border-radius: 3px 0 0 3px;
+
+}
+
+.prev:hover,.next:hover{
+
+background-color: blue;
+
+}
+
+.caption{
+
+text-align: center;
+
+position: absolute;
+ 
+ background-color:rgba(0,0,0,.5);
+
+bottom: 48px;
+
+width:760px;
+color: white;
+
+font-size: 60px;
+
+padding: 8px 22px;
+font-style:blod;
+
+
+}
+
+.dots{
+
+width: 53px;
+
+height: 53px;
+
+background: gray;
+
+display: inline-block;
+
+border-radius: 50%;
+
+cursor: pointer;
+
+}
+
+.fade{
+
+animation-name:fade;
+
+animation-duration:1.5s;
+
+}
+
+@keyframes fade{
+
+from {opacity: 0.4;}
+
+to {opacity: 1;}
+
+}
+
+.active, .dot:hover {
+
+background-color: yellow;
+
+}
+
+
+
+</style>
+</head>
+
+
+
+
+<body>
+<h1>FROM ME TO YOU!</h1>
+
+<div class="slideshow-container">
+
+
+<div class="myslides fade">
+
+<div class="numbers">1 / 7</div>
+<div><img src="w.jpg" ></div>
+
+<div class="caption">You having the cutest smile face with baby dimples. Exactly the classy beauty i never thought existed.
+
+<footer>-Face-</footer> 
+
+</div>
+
+</div>
+
+<div class="myslides fade">
+
+<div class="numbers">2 / 7</div>
+<div><img src="o.jpg"></div>
+
+<div class="caption">If there is a glance that i always wish to look at everytime...here it is which makes me believe that natural beauty exist!!!
+
+<footer>-Eyes-</footer>
+
+</div>
+
+</div>
+
+
+<div class="myslides fade">
+
+<div class="numbers">3 / 7</div>
+<div><img src="n.jpg" ></div>
+
+<div class="caption">I am out of options on where to start appreciating your dope looks. Its hard to translate your beauty into words!
+  <footer>-lovely Jubbly-</footer>
+
+</div>
+
+</div>
+
+
+<div class="myslides fade">
+
+<div class="numbers">4 / 7</div>
+
+<div><img src="t.jpg"></div>
+
+<div class="caption">Your sensation of beauty is incredible, sexy and  killer looks are my favourite...I cannot wait to meet you in person! Those LIPS
+   <footer>-Exquisite-</footer>
+</div>
+
+
+</div>
+
+<div class="myslides fade">
+
+<div class="numbers">5 / 7</div>
+
+
+<div><img src="a.jpg"></div>
+
+<div class="caption">Your flawless beauty gets me thinking things...such a fantastic figure fills my heart with glamour
+  <footer>-Pleasing-</footer>
+</div>
+
+
+</div>
+
+
+<div class="myslides fade">
+
+<div class="numbers">6 / 7</div>
+<div><img src="aa.jpg"></div>
+
+<div class="caption">It's hard for everyone to look cute everyday except for you...As people grow old, you grow beauty. wow! Super pretty shot! In this world on thing i can't avoid is you.
+  <footer>-Dazzling-</footer></div>
+
+</div>
+
+<div class="myslides fade">
+
+<div class="numbers">7 / 7</div>
+
+<div><img src="u.jpg"></div>
+
+<div class="caption">If I continue praising you, i will end up worshipping you...your plausible beauty deserves more than comments! Natural beauty with brilliant heart, mesmerizing treasury house of beauty!!
+<footer>-Gorgeous-</footer>
+</div>
+
+</div>
+
+
+
+
+
+
+<button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+
+<button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+
+</div>
+
+<br>
+
+
+<div style="text-align:center">
+
+<span class="dots" onclick="currentSlide(1)"></span> 
+
+<span class="dots" onclick="currentSlide(2)"></span> 
+
+<span class="dots" onclick="currentSlide(3)"></span> 
+
+<span class="dots" onclick="currentSlide(4)"></span> 
+<span class="dots" onclick="currentSlide(5)"></span> 
+
+<span class="dots" onclick="currentSlide(6)"></span> 
+
+<span class="dots" onclick="currentSlide(7)"></span> 
+
+
+
+
+</div>
+
+
+<script type="text/javascript">
+
+var slideIndex = 1;
+
+showSlide(slideIndex);
+
+
+function plusSlides(n){
+
+showSlide(slideIndex += n);
+
+}
+
+
+function currentSlide(n) {
+
+showSlide(slideIndex = n);
+
+}
+
+
+function showSlide(n){
+
+var i;
+
+var slides = document.getElementsByClassName("myslides");
+
+var dots = document.getElementsByClassName("dots");
+
+if (n > slides.length) { slideIndex = 1};
+
+if (n < 1) { slideIndex = slides.length};
+
+for (i=0;i<slides.length;i++) {
+
+slides[i].style.display = "none";
+
+};
+
+for (i=0;i<dots.length;i++) {
+
+dots[i].className = dots[i].className.replace(" active","");
+
+};
+
+slides[slideIndex-1].style.display = "block";
+
+dots[slideIndex-1].className += " active";
+
+}
+</script>
+
+    </body>
+</html>

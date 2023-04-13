@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Gallery</title>
+	<style>
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+			grid-gap: 20px; 
+			align-items: center; 
+		}
+
+	
+		.gallery-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: linear-gradient(blue, black, white);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			transition: all 0.3s ease-in-out;
+		}
+
+		.gallery-item:hover {
+			transform: scale(2.05); 
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+		}
+
+	
+		.gallery-item img {
+			max-width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 5px;
+		}
+		.main{
+			background:black;
+			background-position: top;
+			background-repeat: none;
+		}
+		 .shine {
+		animation: shine 1s infinite;
+		font-size: 60px;
+		font-family: 'Times New Roman', Times, serif;
+		text-align: center;
+		
+		}
+
+		@keyframes shine {
+		0% {
+			color: orange;
+			text-shadow: 0 0 5px orange;
+		}
+		50% {
+			color: #fff;
+			text-shadow: 0 0 10px orange;
+		}
+		100% {
+			color: orange;
+			text-shadow: 0 0 5px orangered;
+		}
+        }
+	</style>
+</head>
+<body>
+	<div class="main">
+	<p class="shine">PRETTY BIRTHDAY GIRL MAIN GALLERY!!!</p>
+	
+	<div class="gallery">
+		<div class="gallery-item">
+			<img src="w.jpg" alt="Adorable">
+			<h3>Adorable</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="u.jpg" alt="Adorable">
+			<h3>Adorable</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="t.jpg" alt="Pretty">
+			<h3>Pretty</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="a.jpg" alt="Pretty">
+			<h3>Pretty</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="c.jpg" alt="Charming">
+			<h3>Charming</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="ab.jpg" alt="Charming">
+			<h3>Charming</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="aa.jpg" alt="Charming">
+			<h3>Charming</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="b.jpg" alt="Dainty">
+			<h3>Dainty</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="ac.jpg" alt="Dainty">
+			<h3>Dainty</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="ad.jpg" alt="Dainty">
+			<h3>Dainty</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="ae.jpg" alt="mining">
+			<h3>Cute</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="d.jpg" alt="mining">
+			<h3>Cute</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="af.jpg" alt="mining">
+			<h3>Appealing</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="ag.jpg" alt="Appealing">
+			<h3>Hots</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="ah.jpg" alt="Appealing">
+			<h3>Appealing</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="e.jpg" alt="Appealing">
+			<h3>Appealing</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="g.jpg" alt="Appealing">
+			<h3>Appealing</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="f.jpg" alt="Gorgeous">
+			<h3>Gorgeous</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="k.jpg" alt="Gorgeous">
+			<h3>Gorgeous</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="j.jpg" alt="Gorgeous">
+			<h3>Gorgeous</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="ai.jpg" alt="Gorgeous">
+			<h3>Gorgeous</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="m.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="i.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="h.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="l.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="o.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="n.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="r.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="q.jpg" alt="Lovely">
+			<h3>Lovely</h3>
+		</div>
+		<div class="gallery-item">
+			<img src="p.jpg" alt="Lovely">
+			<h3>Sexy!</h3>
+		</div>
+		
+		
+
+
+	</div>
+	</div>
+</body>
+</html>

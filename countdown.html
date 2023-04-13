@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body{
+    background-image: linear-gradient(to right top, black, blue, black, blue, black);
+    font-family: 'Montserrat', sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+.footer, .header,.thanks, .container div > h5, .braces{
+    color: #fff;
+    text-align: center;
+}
+.braces{
+    display: inline;
+}
+.container div > h5, .thanks{
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+.header{
+    font-size: 1em;
+    color: orange;
+}
+.container{
+    width: 96%;
+    min-height:258px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 6px 89px -37px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 6px 89px -37px rgba(0,0,0,0.75);
+    box-shadow: 2px 6px 89px -37px rgba(0,0,0,0.75);
+    margin: 1em auto;
+    border-radius: .9em;
+}
+.container > div{
+    width: 100%;
+    text-align: center;
+}
+.counter > h1{
+    font-size: 4em;
+    margin-top: .2em;
+    margin-bottom: .2em;
+    color:  #ff7f50;;
+}
+
+#edt_profile, #btn_wish{
+    outline: none;
+    border: none;
+    padding: .7em;
+    margin: .6em;
+    text-align: center;
+    border-radius: .9em;
+    transition: width 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#btn_wish{
+    background-color:  rgba(255, 127, 80, 0.3);
+    border: 2px solid #ff7f50;
+    color: #ff7f50;
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+}
+
+#edt_profile{
+    width: 70%;
+    background: rgba(255,255,255,0.4);
+    color: #fff;
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+}
+::-webkit-input-placeholder { 
+    color: rgb(230, 220, 220);
+} 
+:-moz-placeholder { 
+    color: rgb(230, 220, 220); 
+}
+::-moz-placeholder { 
+    color: rgb(230, 220, 220); 
+}
+:-ms-input-placeholder { 
+    color: rgb(230, 220, 220); 
+}
+
+#edt_profile:focus{
+    width: 76%;
+}
+#btn_wish:hover{
+    background-color:  rgb(61, 61, 215);
+}
+
+.loader {
+    display:inline-block;
+    position: relative;
+    top: 0.4em;    
+    border: 0.2em solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 0.2em solid #3498db;
+    width: 1.3em;
+    height: 1.3em;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 0.8s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+    }
+        
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.hide{
+    display: none;
+}
+.count{
+    color: #f3f3f3;
+}
+.baloon1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6em;
+    height: 10em;
+    animation-name: balloon1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    animation-direction: alternate-reverse;
+}
+.baloon2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 6em;
+    height: 10em;
+    animation-name: balloon2;
+    animation-duration: 5s;
+    animation-iteration-count:  infinite;
+    animation-direction: reverse;
+    
+}
+@keyframes balloon1{
+    from{
+        bottom: -100px;
+    }
+    to{
+        bottom: 650px;
+    }
+}
+@keyframes balloon2{
+    from{
+        bottom: -100px;
+    }
+    to{
+        bottom: 650px;
+    }
+}
+.footer
+{
+    animation:beat 1s linear infinite ;
+    display:block ;
+}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+</head>
+<body>
+    <h4 class="header">Hey Babe, it's Already Your 19th Birthday!</h4>
+    <img class="baloon1" src="m.jpg" alt="ballons">
+    <img class="baloon2" src="aa.jpg" alt="ballons">
+    <div class="container">
+        <div class="message">
+            <h3 class="thanks">Remaining:</h3>
+        </div>
+            
+        <div class="counter">
+            <h1>00:00:00</h1>
+        </div>
+        
+        <div>
+            <input placeholder="Enter Your Birthday Wish!" type="text" id="edt_profile">         
+        </div>
+        
+        <div>
+            <span id="spin" ></span>
+           <a href="cake.html"> <button id="btn_wish" >Grant It !</button></a>
+             <h4 class="braces">&hearts;</h4><span class="count"> load...</span>
+        </div>
+    </div>
+    <footer>
+            <h5 class="footer">Made with &hearts; &hearts; &hearts;</h5>
+    <script>load()</script>
+</body>
+</html>
+

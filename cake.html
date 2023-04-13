@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Happy BirthDay</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<style>
+		:root {
+	--root: #f70;
+	--white: #fff;
+	--track: #12263a;
+	--after: #ff889c;
+	--before: #91A563;
+	--hsl: hsl(200, 4%, 6%);
+	--gradient: linear-gradient(hsl(7, 45%, 27%), hsl(7, 30%, 44%));
+	--bg: radial-gradient(#374566, #010203);
+}
+
+*, ::before, ::after {
+	margin: 0;padding: 0;
+	border: none;
+	list-style: none;
+	outline: none;
+	resize: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--track);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--bg);
+	border-radius: 1rem;
+	border: 1px solid #599;
+}
+
+body {
+	height: 100%;
+	background: var(--bg);
+
+}
+.my-birth {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 4.5rem;
+}
+.ball {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	position: relative;
+}
+.ball > div {
+	width: 102px;height: 120px;
+	border-radius: 80% 80% 80% 80%;
+	margin: 0 auto;
+	position: absolute;
+	padding: 10px;
+	-webkit-transform-origin: bottom center;
+}
+.ball > div:nth-child(4),
+.ball > div:nth-child(5){
+	width: 105px;height: 150px;
+}
+.ball > div:nth-child(1) {
+	background: rgba(242, 112, 45, 1);
+	left: 0;
+	box-shadow: inset 10px 10px 10px rgba(242, 112, 45, 1);
+	animation: ball1 6s ease-in-out infinite;
+}
+.ball > div:nth-child(1):before {
+	color: rgba(242, 112, 45, 1);
+}
+.ball > div:nth-child(2) {
+	background: rgba(255, 255, 255, 255);
+	left: 120px;
+	box-shadow: inset 10px 10px 15px rgba(255, 255, 255, 255);
+	animation: ball2 6s ease-in-out infinite;
+}
+.ball > div:nth-child(2):before {
+	color: rgba(255, 255, 255, 255);
+}
+.ball > div:nth-child(3) {
+	background: hsl(100, 75%, 60%);
+	left: 240px;
+	box-shadow: inset 10px 10px 10px hsl(100, 75%, 60%);
+	animation: ball4 6s ease-in-out infinite;
+}
+.ball > div:nth-child(3):before {
+	color: hsl(100, 75%, 60%);
+}
+.ball > div:nth-child(4) {
+	background: rgba(190, 61, 244, 0.9);
+	left: 21%;bottom: -650%;
+	box-shadow: inset 10px 10px 10px rgba(173, 14, 240, .9);
+	animation: ball1 5s ease-in-out infinite;
+}
+.ball > div:nth-child(4):before {
+	color: rgba(190, 61, 244, .9);
+}
+.ball > div:nth-child(5) {
+	background: rgba(180, 224, 67, .9);
+	right: 21%;bottom: -650%;
+	box-shadow: inset 10px 10px 10px rgba(158, 206, 34, .9);
+	animation: ball2 5s ease-in-out infinite;
+}
+.ball > div:nth-child(5):before {
+	color: rgba(180, 224, 67, .9);
+}
+
+.ball > div:before{
+	position: absolute;
+	bottom: -11px;left: 45px;
+	content: "▲";
+	font-size: 1rem;
+}
+span {
+	font-size: 5rem;
+	color: var(--white);
+	position: relative;
+	top: 1rem;left: 50%;
+	margin-left: -2rem;
+}
+div:nth-child(2) span{
+	color: rgba(182, 15, 97, 1);
+}
+div:nth-child(5) span{
+	color: rgba(242, 112, 45, 1);
+	font-size: 8rem;
+	top: -15px;
+}
+div:nth-child(4) span{
+	font-size: 8rem;
+	top: -15px;
+}
+@keyframes ball1 {
+	0%, 100% {transform: translateY(0) rotate(-6deg);}
+	50% {transform: translateY(-20px) rotate(8deg);}
+}
+
+@keyframes ball2 {
+	0%, 100% {transform: translateY(0) rotate(6deg);}
+	50% {transform: translateY(-30px) rotate(-8deg);}
+}
+
+@keyframes ball3 {
+	0%, 100% {transform: translate(0, -10px) rotate(6deg);}
+	50% {
+		transform: translate(-20px, 30px) rotate(-8deg);
+	}
+}
+@keyframes ball4 {
+	0%, 100% {transform: translate(10px, -10px) rotate(-8deg);}
+	50% {transform: translate(-15px, 10px) rotate(10deg);}
+}
+
+h1 {
+	position: absolute;
+	top: 50%;right: 32%;
+	color: var(--white);
+	font-size: 3rem;
+}
+h1::after{
+	content: ' IVY';
+	position: absolute;
+	top: 2%; left: 1%;
+	font-size: 3rem;
+	color: var(--after);
+	text-shadow: 3px 0 0 var(--white), 0 0 3px rgba( 0,0,0,.4);
+}
+.birthday-card {
+	position: relative;
+	padding-top: 7rem;
+	padding-bottom: 1rem;
+}
+.card {
+	overflow: hidden;
+	width: 370px;height:440px;
+	box-shadow: 3px 4px 5px 8px rgba(0,0,0,.5);
+	cursor: pointer;
+	transition: .3s;
+	padding-top: 1rem;
+}
+.card:hover {
+	transform: scale(1.11);
+}
+.cake-end {
+	content:"";
+	position: absolute;
+	height: 25px;width: 250px;
+	background: var(--after);
+	border-radius: 8px 5px 0 0;
+	margin: 0 auto;
+	top:340px;left:65px;
+}
+.my-cake {
+	position: relative;
+	top:40px;
+}
+.my-cake::after {
+	content: '19yr';
+	position: absolute;
+	top: 11%;left: 1%;
+	font-size: 5em;
+	color: var(--after);
+	text-shadow: 4px 0 0 var(--white), 0 0 4px rgba( 0,0,0,.4 );
+}
+.my-cake::before {
+	content: 'old';
+	position: absolute;
+	top: 11%;right: 2%;
+	font-size: 6em;
+	color: var(--before);
+	text-shadow: 8px 0 0 var(--white), 0 0 3px rgba( 0,0,0,.4 );
+}
+.cake-e{
+	position: absolute;
+	height: 5px;width: 250px;
+	background: var(--white);
+	top: 300px;left:67px;
+	border-radius: 8px 5px 0 0;
+	overflow: hidden;
+}
+.cake-b {
+	position: absolute;
+	width:200px;height: 60px;
+	background: #0ff;
+	top:240px;left:91px;
+	border-radius: 7px 7px 0 0;
+	overflow: hidden;
+}
+.cake-b:after {
+	content:"";	left:-5px;
+	position: absolute;
+	width: 30px;height: 15px;
+	border-radius: 0 0 50px 50px;
+	background: var(--white);
+	box-shadow: 30px 0 var(--white), 60px 0 var(--white), 90px 0 var(--white), 120px 0 var(--white), 150px 0 var(--white), 180px 0 var(--white);
+}
+.cake-b:before {
+	content:"";	left:25px;
+	position: absolute;
+	background: var(--after);
+	width: 30px;height: 60px;
+	box-shadow: 60px 0 var(--after), 120px 0 var(--after);
+}
+.cake-m {
+	position: absolute;
+	width: 150px;height: 60px;
+	background: hsl(25, 75%, 60%);
+	border-radius: 7px 7px 0 0;
+	top:180px;left:117px;
+	box-shadow: inset 0 -20px #497;
+	overflow: hidden;
+}
+.cake-m:before {
+	content:"";
+	position:absolute;
+	background: #ef476f;
+	border-radius:50%;
+	width:10px;height: 10px;
+	top:20px;left: 10px;
+	box-shadow: 15px 10px #d80, 30px 0 #06d6a0,
+	45px 10px #ef476f, 60px 0 #ffd166,
+	75px 10px #06d6a0, 90px 0 #ef476f,
+	105px 10px #ffd166, 120px 0 #06d6a0;
+}
+.cake-m:after {
+	content:"";	left:0;
+	position: absolute;
+	width: 30px;height: 15px;
+	border-radius: 0 0 50px 50px;
+	background: var(--white);
+	box-shadow: 30px 0 var(--white), 60px 0 var(--white), 90px 0 var(--white), 120px 0 var(--white);
+}
+.cake-t {
+	position: absolute;
+	width:100px;height: 60px;
+	background: hsl(25, 75%, 60%);
+	border-radius: 7px 7px 0 0;
+	top:120px;left:143px;
+	overflow: hidden;
+	box-shadow: inset 0 20px #118ab2;
+}
+.cake-t:before {
+	content:"";left:-5px;
+	position: absolute;
+	background: #118ab2;
+	width: 15px;height:35px;
+	border-radius:20px;
+	box-shadow: 15px 10px hsl(52, 75%, 60%),
+	30px 5px #118ab2,
+	45px 5px hsl(52, 75%, 60%),
+	60px -5px #118ab2,
+	75px 10px hsl(52, 75%, 60%),
+	90px 0 #118ab2;
+}
+.cake-t:after {
+	position: absolute;
+	content:"";left:50px;
+	background: rgba(0,0,0,.1);
+	width:50px;	height: 60px;
+	border-radius: 0 7px 0 0;
+}
+.plug {
+	position: absolute;
+	background: repeating-linear-gradient(-45deg, var(--white), var(--white) 5px, var(--after) 5px, var(--after) 10px);
+	width: 10px;height: 50px;
+	border-radius: 3px 3px 0 0;
+	top:70px;left:188px;
+}
+.plug:before {
+	content:"";
+	position: absolute;
+	background: var(--track);
+	width:1px;height:10px;
+	top:-10px;left:4px;
+}
+.fire {
+	position: absolute;
+}
+.fire:before {
+	content:"";
+	position: absolute;
+	background: var(--root);
+	border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+	transform: rotate(-45deg);
+	width:20px;height:20px;
+	top:45px;left:183px;
+	animation: scale .5s linear infinite;
+}
+.fire:after {
+	content:"";
+	position: absolute;
+	border-radius: 50%;
+	background: #ffbe0b;
+	width: 11px;height: 11px;
+	top:50px;left:187px;
+	animation: scale .5s linear infinite;
+}
+@keyframes scale {
+	0% {transform: scaleY(1) rotate(-45deg);}
+	25% {transform: scaleY(1.3) rotate(-45deg);}
+	50% {transform: scaleY(1) rotate(-45deg);}
+	75% {transform: scaleY(1.3) rotate(-45deg);}
+	100% {transform: scaleY(1) rotate(-45deg);}
+}
+
+.sh {
+	position: absolute;
+	background: rgba(0,0,0,.1);
+	height: 60px;width: 74px;
+	border-radius:0 7px 0 0;
+	top:180px;left:193px;
+}
+.sh:before, .sh:after {
+	content:"";
+	position: absolute;
+	background: rgba(0,0,0,.1);
+}
+.sh:before {
+	height: 60px;width:98px;
+	border-radius:0 7px 0 0;
+	top:60px;
+}
+.sh:after {
+	height: 40px;width:5px;
+	border-radius: 0 5px 0 0;
+	top:-100px;
+}
+.candy {
+	position: absolute;
+	width: 350px;
+	height: 400px;
+}
+
+.s-One, .s-Two,
+.s-Three, .s-Four,
+.s-Five, .s-Six,
+.s-Seven, .s-Eight,
+.s-Nine, .s-Ten {
+	position: absolute;
+	width: 10px;height: 25px;
+	top:-110px;
+}
+.s-One {
+	background: hsl(25, 75%, 60%);;
+	animation: down 2.5s linear infinite;
+	left:50px;
+}
+.s-Two {
+	background: var(--white);
+	animation: down 2.3s linear infinite .2s;
+	left:150px;
+}
+.s-Three {
+	background: hsl(100, 75%, 60%);
+	animation: down 2.4s linear infinite .4s;
+	left: 250px;
+}
+.s-Four {
+	background: #d87;
+	animation: down 2.7s linear infinite .1s;
+	left:300px;
+}
+.s-Five {
+	background: #487;
+	animation: down 2.6s linear infinite .7s;
+	left:5px;
+}
+
+@keyframes down {
+	0% {top:-110px; transform: rotate(0deg) rotateY(-90deg);opacity:1;}
+	100% {top:400px; transform: rotate(360deg) rotateY(180deg);opacity:0.5;}
+}
+@keyframes downTwo {
+	0% {top:-130px; transform: rotate(0deg) rotateY(90deg);opacity:1;}
+	100% {top:400px; transform: rotate(-360deg) rotateY(-180deg);opacity:0.5;}
+}
+.s-Six {
+	background: #600;
+	animation: downTwo 2.4s linear infinite .2s;
+	left:70px;
+}
+.s-Seven {
+	background: #ef476f;
+	animation: downTwo 2.1s linear infinite .7s;
+	left:170px;
+}
+.s-Eight {
+	background: #f70;
+	animation: downTwo 2.4s linear infinite .9s;
+	left:280px;
+}
+.s-Nine {
+	background: #06d6a0;
+	animation: downTwo 2.9s linear infinite .9s;
+	left:50px;
+}
+.s-Ten {
+	background: #960;
+	animation: downTwo 2.2s linear infinite 1.1s;
+	left:350px;
+}
+.hbd {
+	background: var(--white);
+	position: absolute;
+	font-size: 3rem;
+	z-index: 1;
+	font-weight: bold;
+	bottom: 5%;
+	left: 5%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: text-anime 10s infinite linear alternate;
+}
+
+.hdb{
+	background-size: 50px 50px;
+	background-image: repeating-linear-gradient(45deg , transparent 0 , transparent 25% , #c75 0 , #225 50% , transparent 0),
+	repeating-linear-gradient(-45deg , transparent 0 , transparent 25% , #d15 0 , #64b 50% , transparent 0);
+}
+@keyframes text-anime {
+	100%{
+		background-position:  100%;
+	}
+}
+button {
+  width: 165px;
+  height: 62px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.5s;
+}
+
+button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+button:active {
+  transform: scale(0.9) rotate(3deg);
+  background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  transition: 0.5s;
+}
+.btn{
+	position: absolute;
+	font-size: 3rem;
+	bottom: -25%;
+	left: 5%;
+	display:block;
+
+	
+
+
+
+}
+	</style>
+</head>
+<body>
+
+<div class="my-birth" id="birthday">
+	<div class="birthday-card">
+		<div class="ball">
+			<div><span>H</span></div>
+			<div><span>B</span></div>
+			<div><span>D</span></div>
+			<div><span>1</span></div>
+			<div><span>9</span></div>
+		</div>
+		<h1></h1>
+		<div class="card">
+			<div class="my-cake">
+				<div class="cake-b"></div>
+				<div class="cake-m"></div>
+				<div class="cake-t"></div>
+				<div class="cake-e"></div>
+				<div class="plug"></div>
+				<div class="fire"></div>
+				<div class="sh"></div>
+			</div>
+			<div class="candy">
+				<div class="s-One"></div>
+				<div class="s-Two"></div>
+				<div class="s-Three"></div>
+				<div class="s-Four"></div>
+				<div class="s-Five"></div>
+				<div class="s-Six"></div>
+				<div class="s-even"></div>
+				<div class="s-Eight"></div>
+				<div class="s-Nine"></div>
+				<div class="s-Ten"></div>
+			</div>
+			<div class="hbd hdb">Happy Birthday!</div>
+		</div>
+	</div>
+</div>
+
+<div class="btn">
+	<a href="gallery.html"><button>Gallery</button></a>
+	<a href="SlideShow.html"><button>Slide show</button></a>
+	<a href="Tour.html"><button>Tour</button></a>
+	<a href="whatsapp.html"><button>whatsApp</button></a>
+
+</div>
+
+
+
+<script src=""></script>
+</body>
+</html>
+
+
+
+
