@@ -523,6 +523,14 @@ button:active {
 	</style>
 </head>
 <body>
+	<audio id="song">
+	<source src="hbd.mp3">
+</audio>
+
+<script>
+	window.addEventListener("click", () => {
+		document.getElementById('song').play();
+	}) ;
 
 <div class="my-birth" id="birthday">
 	<div class="birthday-card">
